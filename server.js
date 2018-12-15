@@ -24,7 +24,7 @@ app.get('/api/json', function (req, res) {
 });
 
 app.get('/api/employees/', db.getAllEmployees);
-//app.get('/api/employees/:id', db.getEmployeesByID);
+app.get('/api/employees/:id', db.getEmployeesByID);
 
 
 var port = process.env.PORT || 5432;

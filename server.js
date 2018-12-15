@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var db = require('./db');
+var db = require('./database');
 
 var cors = require('cors');
 app.use(cors())
@@ -24,7 +24,7 @@ app.get('/api/json', function (req, res) {
 });
 
 app.get('/api/employees/', db.getAllEmployees);
-app.get('/api/employees/:id', db.getEmployeesByID);
+//app.get('/api/employees/:id', db.getEmployeesByID);
 
 
 var port = process.env.PORT || 5432;
